@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 " let Vundle manage Vundle
 " required !
-Bundle 'gmarik/Vundle.vim'
+Bundle 'gmarik/vundle'
 
 " The bundles you install will be listed here
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
