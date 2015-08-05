@@ -1,11 +1,11 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 " let Vundle manage Vundle
 " required !
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 
 " The bundles you install will be listed here
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
