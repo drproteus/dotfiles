@@ -93,3 +93,4 @@ set mouse=a
 set autoread
 let NERDTreeQuitOnOpen = 1
 set completeopt=menu
+set linebreak
