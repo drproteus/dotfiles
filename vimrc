@@ -78,7 +78,7 @@ let g:pymode_folding = 0
 let g:pymode_options_max_line_length = 120
 
 " my config
-colors smyck
+colors Tomorrow-Night-Bright
 set shiftwidth=4
 set tabstop=4
 set expandtab
@@ -94,3 +94,4 @@ set autoread
 let NERDTreeQuitOnOpen = 1
 set completeopt=menu
 set linebreak
+autocmd Filetype html,ruby,javascript,json setlocal ts=2 sts=2 sw=2
