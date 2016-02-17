@@ -1,6 +1,6 @@
 [user]
 	name = Jake Goritski
-	email = jgoritski@gmail.com
+	email = jake.goritski@accellion.com
 [http]
 	sslVerify = false
 [color]
@@ -17,8 +17,8 @@
     default = simple
 [core]
     editor = vim
-	excludesfiles = /Users/j/.gitignore
-	excludesfile = /Users/j/.gitignore
+	excludesfiles = /Users/jake.goritski/.gitignore
+	excludesfile = /Users/jake.goritski/.gitignore
 [branch]
     autosetuprebase = always
 [merge]
