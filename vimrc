@@ -11,11 +11,11 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle 'klen/python-mode'
+" Bundle 'klen/python-mode'
 Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'keith/swift.vim'
-Bundle 'msanders/cocoa.vim'
-Bundle 'Rip-Rip/clang_complete'
+" Bundle 'keith/swift.vim'
+" Bundle 'msanders/cocoa.vim'
+" Bundle 'Rip-Rip/clang_complete'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'elzr/vim-json'
 
@@ -94,4 +94,12 @@ set autoread
 let NERDTreeQuitOnOpen = 1
 set completeopt=menu
 set linebreak
-autocmd Filetype html,ruby,javascript,json setlocal ts=2 sts=2 sw=2
+autocmd Filetype html,ruby,javascript,json,haskell setlocal ts=2 sts=2 sw=2
+set noswapfile
+set wildignore+=*.pyc
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
