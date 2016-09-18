@@ -18,6 +18,7 @@ Bundle 'ctrlpvim/ctrlp.vim'
 " Bundle 'Rip-Rip/clang_complete'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'elzr/vim-json'
+Bundle 'tikhomirov/vim-glsl'
 
 " Highlight excess line width
 " augroup vimrc_autocmds
