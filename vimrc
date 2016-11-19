@@ -19,6 +19,7 @@ Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'elzr/vim-json'
 Bundle 'tikhomirov/vim-glsl'
+Bundle 'nikvdp/ejs-syntax'
 
 " Highlight excess line width
 " augroup vimrc_autocmds
@@ -95,7 +96,7 @@ set autoread
 let NERDTreeQuitOnOpen = 1
 set completeopt=menu
 set linebreak
-autocmd Filetype html,ruby,javascript,json,haskell setlocal ts=2 sts=2 sw=2
+autocmd Filetype html,ruby,javascript,json,haskell,ejs setlocal ts=2 sts=2 sw=2
 set noswapfile
 set wildignore+=*.pyc
 if &term =~ '256color'
