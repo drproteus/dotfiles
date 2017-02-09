@@ -24,6 +24,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'jnurmine/Zenburn'
 Bundle 'nvie/vim-flake8'
 Bundle 'lambdatoast/elm.vim'
+Bundle 'jdonaldson/vaxe'
 
 " Highlight excess line width
 " augroup vimrc_autocmds
@@ -122,3 +123,7 @@ if 'VIRTUAL_ENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 EOF
+
+set enc=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,prc
