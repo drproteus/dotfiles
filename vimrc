@@ -11,7 +11,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-" Bundle 'klen/python-mode'
+Bundle 'klen/python-mode'
 Bundle 'ctrlpvim/ctrlp.vim'
 " Bundle 'keith/swift.vim'
 " Bundle 'msanders/cocoa.vim'
@@ -20,6 +20,10 @@ Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'elzr/vim-json'
 Bundle 'tikhomirov/vim-glsl'
 Bundle 'nikvdp/ejs-syntax'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'jnurmine/Zenburn'
+Bundle 'nvie/vim-flake8'
+Bundle 'lambdatoast/elm.vim'
 
 " Highlight excess line width
 " augroup vimrc_autocmds
@@ -105,3 +109,16 @@ if &term =~ '256color'
   " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
   set t_ut=
 endif
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g   :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
