@@ -1,0 +1,25 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "Hack",
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": "vs-seti",
+    "workbench.editor.enablePreview": false,
+    "editor.parameterHints": false,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Tomorrow",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/migrations/**": true
+    },
+    "[cpp]": {
+        "editor.quickSuggestions": false
+    },
+    "[c]": {
+        "editor.quickSuggestions": false
+    },
+    "editor.acceptSuggestionOnEnter": false
+}
