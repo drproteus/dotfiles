@@ -13,7 +13,7 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlpvim/ctrlp.vim'
-" Bundle 'keith/swift.vim'
+Bundle 'keith/swift.vim'
 " Bundle 'msanders/cocoa.vim'
 " Bundle 'Rip-Rip/clang_complete'
 Bundle 'chriskempson/vim-tomorrow-theme'
@@ -128,5 +128,5 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 
 set enc=utf-8
-set fileencoding=utf-8
 set fileencodings=ucs-bom,utf8,prc
+set fileencoding=utf-8
