@@ -8,18 +8,24 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " The bundles you install will be listed here
+Bundle 'python-mode/python-mode'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-" Bundle 'klen/python-mode'
 Bundle 'ctrlpvim/ctrlp.vim'
-" Bundle 'keith/swift.vim'
+Bundle 'keith/swift.vim'
 " Bundle 'msanders/cocoa.vim'
 " Bundle 'Rip-Rip/clang_complete'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'elzr/vim-json'
 Bundle 'tikhomirov/vim-glsl'
 Bundle 'nikvdp/ejs-syntax'
+Bundle 'nvie/vim-flake8'
+Bundle 'lambdatoast/elm.vim'
+Bundle 'jdonaldson/vaxe'
+Bundle 'morhetz/gruvbox'
+Bundle 'KeitaNakamura/neodark.vim'
+Bundle 'davidklsn/vim-sialoquent'
 
 " Highlight excess line width
 " augroup vimrc_autocmds
@@ -55,10 +61,11 @@ let g:pymode_doc = 1
 let g:pymode_doc_key = 'K'
 
 "Linting
-let g:pymode_lint = 1
+let g:pymode_lint = 0
 let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_ignore = "E5,E2,E3,E1,W"
 " Auto check on save
-let g:pymode_lint_write = 1
+let g:pymode_lint_write = 0
 
 " Support virtualenv
 let g:pymode_virtualenv = 1
@@ -80,6 +87,7 @@ let g:pymode_folding = 0
 let g:pymode_options_max_line_length = 120
 
 " my config
+" set background=dark
 colors Tomorrow-Night-Bright
 set shiftwidth=4
 set tabstop=4
@@ -105,3 +113,20 @@ if &term =~ '256color'
   " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
   set t_ut=
 endif
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g   :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+set enc=utf-8
+set fileencodings=ucs-bom,utf8,prc
+set fileencoding=utf-8
