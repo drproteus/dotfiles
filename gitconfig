@@ -17,8 +17,8 @@
     default = simple
 [core]
     editor = vim
-	excludesfiles = /Users/jakegoritski/.gitignore
-	excludesfile = /Users/jakegoritski/.gitignore
+	excludesfiles = ~/.gitignore
+	excludesfile = ~/.gitignore
 [branch]
     autosetuprebase = always
 [merge]
