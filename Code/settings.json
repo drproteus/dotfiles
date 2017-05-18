@@ -8,7 +8,7 @@
     "workbench.editor.enablePreview": false,
     "editor.parameterHints": false,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Tomorrow",
+    "workbench.colorTheme": "Tomorrow Night Bright",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -22,5 +22,8 @@
     "[c]": {
         "editor.quickSuggestions": false
     },
-    "editor.acceptSuggestionOnEnter": false
+    "editor.acceptSuggestionOnEnter": false,
+    "python.linting.enabled": false,
+    "python.linting.enabledWithoutWorkspace": false,
+    "keyboard.dispatch": "keyCode"
 }
