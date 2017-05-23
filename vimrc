@@ -87,8 +87,8 @@ let g:pymode_folding = 0
 let g:pymode_options_max_line_length = 120
 
 " my config
-" set background=dark
-colors Tomorrow-Night-Bright
+set background=dark
+colors gruvbox
 set shiftwidth=4
 set tabstop=4
 set expandtab
