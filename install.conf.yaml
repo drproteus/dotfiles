@@ -5,6 +5,5 @@
     ~/.vim: vim/
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
-    ~/Library/Application Support/Code/User/settings.json: Code/settings.json
-    ~/Library/Application Support/Code/User/keybindings.json: Code/keybindings.json
-    ~/Library/Application Support/Code/User/snippets: Code/snippets/
+    ~/.config/Code/User/settings.json: Code/settings.json
+    ~/.config/Code/User/keybindings.json: Code/keybindings.json

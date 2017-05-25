@@ -1,13 +1,14 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "Hack",
+    "editor.fontFamily": "Hack",
+    "editor.fontSize": 12,
     "window.zoomLevel": 0,
     "workbench.iconTheme": "vs-seti",
     "workbench.editor.enablePreview": false,
     "editor.parameterHints": false,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Tomorrow",
+    "workbench.colorTheme": "Tomorrow Night Bright",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -21,5 +22,8 @@
     "[c]": {
         "editor.quickSuggestions": false
     },
-    "editor.acceptSuggestionOnEnter": false
+    "editor.acceptSuggestionOnEnter": false,
+    "python.linting.enabled": false,
+    "python.linting.enabledWithoutWorkspace": false,
+    "keyboard.dispatch": "keyCode"
 }

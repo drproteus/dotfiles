@@ -8,14 +8,12 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " The bundles you install will be listed here
-Bundle 'python-mode/python-mode'
+" Bundle 'python-mode/python-mode'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'keith/swift.vim'
-" Bundle 'msanders/cocoa.vim'
-" Bundle 'Rip-Rip/clang_complete'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'elzr/vim-json'
 Bundle 'tikhomirov/vim-glsl'
@@ -26,6 +24,9 @@ Bundle 'jdonaldson/vaxe'
 Bundle 'morhetz/gruvbox'
 Bundle 'KeitaNakamura/neodark.vim'
 Bundle 'davidklsn/vim-sialoquent'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'davidhalter/jedi-vim'
 
 " Highlight excess line width
 " augroup vimrc_autocmds
@@ -53,38 +54,38 @@ set laststatus=2
 " ]]            Jump on next class or function (normal, visual, operatormodes)
 " [M            Jump on previous class or method (normal, visual, operatormodes)
 " ]M            Jump on next class or method (normal, visual, operatormodes)
-let g:pymode_rope = 0
-let g:pymode_rope_lookup_project = 0
+" let g:pymode_rope = 0
+" let g:pymode_rope_lookup_project = 0
 
 " Documentation
-let g:pymode_doc = 1
-let g:pymode_doc_key = 'K'
+" let g:pymode_doc = 1
+" let g:pymode_doc_key = 'K'
 
 "Linting
-let g:pymode_lint = 0
-let g:pymode_lint_checker = "pyflakes,pep8"
-let g:pymode_lint_ignore = "E5,E2,E3,E1,W"
-" Auto check on save
-let g:pymode_lint_write = 0
-
-" Support virtualenv
-let g:pymode_virtualenv = 1
-
-" Enable breakpoints plugin
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_bind = '<leader>b'
-
-" syntax highlighting
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
-
-" Don't autofold code
-let g:pymode_folding = 0
-
-" Max line length
-let g:pymode_options_max_line_length = 120
+" let g:pymode_lint = 0
+" let g:pymode_lint_checker = "pyflakes,pep8"
+" let g:pymode_lint_ignore = "E5,E2,E3,E1,W"
+" " Auto check on save
+" let g:pymode_lint_write = 0
+" 
+" " Support virtualenv
+" let g:pymode_virtualenv = 1
+" 
+" " Enable breakpoints plugin
+" let g:pymode_breakpoint = 1
+" let g:pymode_breakpoint_bind = '<leader>b'
+" 
+" " syntax highlighting
+" let g:pymode_syntax = 1
+" let g:pymode_syntax_all = 1
+" let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+" let g:pymode_syntax_space_errors = g:pymode_syntax_all
+" 
+" " Don't autofold code
+" let g:pymode_folding = 0
+" 
+" " Max line length
+" let g:pymode_options_max_line_length = 120
 
 " my config
 " set background=dark
@@ -117,6 +118,10 @@ endif
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g   :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+set enc=utf-8
+set fileencodings=ucs-bom,utf8,prc
+set fileencoding=utf-8
+
 "python with virtualenv support
 py << EOF
 import os
@@ -127,6 +132,3 @@ if 'VIRTUAL_ENV' in os.environ:
     execfile(activate_this, dict(__file__=activate_this))
 EOF
 
-set enc=utf-8
-set fileencodings=ucs-bom,utf8,prc
-set fileencoding=utf-8
