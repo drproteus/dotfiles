@@ -7,7 +7,6 @@
     "workbench.editor.enablePreview": false,
     "editor.parameterHints": false,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -15,12 +14,7 @@
         "**/.DS_Store": true,
         "**/migrations/**": true
     },
-    "[cpp]": {
-        "editor.quickSuggestions": false
-    },
-    "[c]": {
-        "editor.quickSuggestions": false
-    },
     "editor.acceptSuggestionOnEnter": false,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "Tomorrow Night"
 }
