@@ -11,10 +11,11 @@
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
-        "**/.DS_Store": true,
-        "**/migrations/**": true
+        "**/.DS_Store": true
+        // "**/migrations/**": true
     },
     "editor.acceptSuggestionOnEnter": false,
     "editor.wordWrap": "on",
-    "workbench.colorTheme": "Tomorrow Night"
+    "workbench.colorTheme": "Tomorrow Night",
+    "vim.disableAnnoyingNeovimMessage": true
 }
