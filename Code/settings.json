@@ -3,12 +3,12 @@
     "terminal.integrated.fontFamily": "Hack",
     "editor.fontFamily": "Hack",
     "editor.fontSize": 12,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "workbench.iconTheme": "vs-seti",
     "workbench.editor.enablePreview": false,
     "editor.parameterHints": false,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Tomorrow Night Bright",
+    "workbench.colorTheme": "Tomorrow Night",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -25,5 +25,12 @@
     "editor.acceptSuggestionOnEnter": false,
     "python.linting.enabled": false,
     "python.linting.enabledWithoutWorkspace": false,
-    "keyboard.dispatch": "keyCode"
+    "keyboard.dispatch": "keyCode",
+    "editor.wordWrap": "on",
+    "vim.handleKeys": {
+        "<C-b>": false,
+        "<C-k>": false,
+        "<C-w>": false
+    },
+    "vim.disableAnnoyingNeovimMessage": true
 }
