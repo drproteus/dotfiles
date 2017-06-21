@@ -8,14 +8,11 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " The bundles you install will be listed here
-Bundle 'python-mode/python-mode'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'keith/swift.vim'
-" Bundle 'msanders/cocoa.vim'
-" Bundle 'Rip-Rip/clang_complete'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'elzr/vim-json'
 Bundle 'tikhomirov/vim-glsl'
@@ -26,6 +23,9 @@ Bundle 'jdonaldson/vaxe'
 Bundle 'morhetz/gruvbox'
 Bundle 'KeitaNakamura/neodark.vim'
 Bundle 'davidklsn/vim-sialoquent'
+Bundle 'python-mode/python-mode'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'Valloric/YouCompleteMe'
 
 " Highlight excess line width
 " augroup vimrc_autocmds
@@ -40,55 +40,10 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 set gfn=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 set laststatus=2
 
-" Python-mode
-" Activate rope
-" Keys:
-" K             Show python docs
-" <Ctrl-Space>  Rope autocomplete
-" <Ctrl-c>g     Rope goto definition
-" <Ctrl-c>d     Rope show documentation
-" <Ctrl-c>f     Rope find occurrences
-" <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled)
-" [[            Jump on previous class or function (normal, visual, operatormodes)
-" ]]            Jump on next class or function (normal, visual, operatormodes)
-" [M            Jump on previous class or method (normal, visual, operatormodes)
-" ]M            Jump on next class or method (normal, visual, operatormodes)
-let g:pymode_rope = 0
-let g:pymode_rope_lookup_project = 0
-
-" Documentation
-let g:pymode_doc = 1
-let g:pymode_doc_key = 'K'
-
-"Linting
-let g:pymode_lint = 0
-let g:pymode_lint_checker = "pyflakes,pep8"
-let g:pymode_lint_ignore = "E5,E2,E3,E1,W"
-" Auto check on save
-let g:pymode_lint_write = 0
-
-" Support virtualenv
-let g:pymode_virtualenv = 1
-
-" Enable breakpoints plugin
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_bind = '<leader>b'
-
-" syntax highlighting
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
-
-" Don't autofold code
-let g:pymode_folding = 0
-
-" Max line length
-let g:pymode_options_max_line_length = 120
 
 " my config
 set background=dark
-colors Tomorrow-Night-Bright
+colors gruvbox
 set shiftwidth=4
 set tabstop=4
 set expandtab
@@ -115,7 +70,7 @@ if &term =~ '256color'
 endif
 
 let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g   :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" map <leader>g   :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "python with virtualenv support
 py << EOF
@@ -130,3 +85,5 @@ EOF
 set enc=utf-8
 set fileencodings=ucs-bom,utf8,prc
 set fileencoding=utf-8
+
+set nofoldenable
