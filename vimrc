@@ -87,3 +87,4 @@ set fileencodings=ucs-bom,utf8,prc
 set fileencoding=utf-8
 
 set nofoldenable
+filetype plugin indent on
