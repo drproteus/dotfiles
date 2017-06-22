@@ -2,6 +2,7 @@
 {
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "Hack",
+    "editor.fontFamily": "Hack",
     "window.zoomLevel": 0,
     "workbench.iconTheme": "vs-seti",
     "workbench.editor.enablePreview": false,
@@ -17,5 +18,7 @@
     "editor.acceptSuggestionOnEnter": "off",
     "editor.wordWrap": "on",
     "workbench.colorTheme": "Tomorrow Night",
-    "vim.disableAnnoyingNeovimMessage": true
+    "vim.disableAnnoyingNeovimMessage": true,
+    "editor.disableTranslate3d": true,
+    "editor.cursorBlinking": "solid"
 }
