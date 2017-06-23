@@ -8,7 +8,9 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " The bundles you install will be listed here
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
+" Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlpvim/ctrlp.vim'
@@ -18,7 +20,7 @@ Bundle 'elzr/vim-json'
 Bundle 'tikhomirov/vim-glsl'
 Bundle 'nikvdp/ejs-syntax'
 Bundle 'nvie/vim-flake8'
-Bundle 'lambdatoast/elm.vim'
+" Bundle 'lambdatoast/elm.vim'
 Bundle 'jdonaldson/vaxe'
 Bundle 'morhetz/gruvbox'
 Bundle 'KeitaNakamura/neodark.vim'
@@ -26,6 +28,11 @@ Bundle 'davidklsn/vim-sialoquent'
 Bundle 'python-mode/python-mode'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'ElmCast/elm-vim'
+Bundle 'posva/vim-vue'
+Bundle 'dyng/ctrlsf.vim'
+Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Bundle 'junegunn/fzf.vim'
 
 " Highlight excess line width
 " augroup vimrc_autocmds
@@ -88,3 +95,9 @@ set fileencoding=utf-8
 
 set nofoldenable
 filetype plugin indent on
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" PYMODE
+let g:pymode_rope = 0
+let g:pymode_rope_loopup_project = 0
+let g:pymode_rope_complete_on_dot = 0
