@@ -96,3 +96,8 @@ set fileencoding=utf-8
 set nofoldenable
 filetype plugin indent on
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" PYMODE
+let g:pymode_rope = 0
+let g:pymode_rope_loopup_project = 0
+let g:pymode_rope_complete_on_dot = 0
