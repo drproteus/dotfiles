@@ -13,7 +13,7 @@ Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle 'ctrlpvim/ctrlp.vim'
+" Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'keith/swift.vim'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'elzr/vim-json'
@@ -66,7 +66,7 @@ set autoread
 let NERDTreeQuitOnOpen = 1
 set completeopt=menu
 set linebreak
-autocmd Filetype html,ruby,javascript,json,haskell,ejs setlocal ts=2 sts=2 sw=2
+autocmd Filetype html,ruby,javascript,json,haskell,ejs,htmldjango setlocal ts=2 sts=2 sw=2
 set noswapfile
 set wildignore+=*.pyc
 if &term =~ '256color'
@@ -101,3 +101,4 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:pymode_rope = 0
 let g:pymode_rope_loopup_project = 0
 let g:pymode_rope_complete_on_dot = 0
+let g:pymode_trim_whitespaces = 0
