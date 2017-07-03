@@ -33,6 +33,8 @@ Bundle 'posva/vim-vue'
 Bundle 'dyng/ctrlsf.vim'
 Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Bundle 'junegunn/fzf.vim'
+Bundle 'tpope/vim-dispatch'
+Bundle 'OmniSharp/omnisharp-vim'
 
 " Highlight excess line width
 " augroup vimrc_autocmds
@@ -101,4 +103,4 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:pymode_rope = 0
 let g:pymode_rope_loopup_project = 0
 let g:pymode_rope_complete_on_dot = 0
-let g:pymode_trim_whitespaces = 0
+" let g:pymode_trim_whitespaces = 0
