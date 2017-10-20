@@ -3,6 +3,8 @@
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "Hack",
     "editor.fontFamily": "Hack",
+    "editor.fontSize": 10,
+    "terminal.integrated.fontSize": 12,
     "window.zoomLevel": 0,
     "workbench.iconTheme": "vs-seti",
     "workbench.editor.enablePreview": false,
@@ -12,13 +14,14 @@
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
-        "**/.DS_Store": true
+        "**/.DS_Store": true,
+        "*.pyc": true
         // "**/migrations/**": true
     },
     "editor.acceptSuggestionOnEnter": "off",
     "editor.wordWrap": "on",
-    "workbench.colorTheme": "Tomorrow Night",
     "vim.disableAnnoyingNeovimMessage": true,
-    "editor.disableTranslate3d": true,
-    "editor.cursorBlinking": "solid"
+    "editor.cursorBlinking": "solid",
+    "files.trimTrailingWhitespace": true,
+    "workbench.colorTheme": "Life on mars"
 }
