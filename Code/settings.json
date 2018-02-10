@@ -3,12 +3,11 @@
     "terminal.integrated.fontFamily": "Hack",
     "editor.fontFamily": "Hack",
     "editor.fontSize": 12,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "workbench.iconTheme": "vs-seti",
     "workbench.editor.enablePreview": false,
     "editor.parameterHints": false,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Tomorrow Night",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -30,7 +29,11 @@
     "vim.handleKeys": {
         "<C-b>": false,
         "<C-k>": false,
-        "<C-w>": false
+        "<C-w>": false,
+        "<C-d>": true,
+        "<C-]>": false,
+        "<C-[>": false
     },
-    "vim.disableAnnoyingNeovimMessage": true
+    "vim.disableAnnoyingNeovimMessage": true,
+    "python.pythonPath": "/usr/bin/python3"
 }
