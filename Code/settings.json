@@ -4,8 +4,8 @@
     "terminal.integrated.fontFamily": "Hack",
     "editor.fontFamily": "Hack",
     "editor.fontSize": 10,
-    "terminal.integrated.fontSize": 12,
-    "window.zoomLevel": 0,
+    "terminal.integrated.fontSize": 10,
+    "window.zoomLevel": 1,
     "workbench.iconTheme": "vs-seti",
     "workbench.editor.enablePreview": false,
     "editor.parameterHints": false,
@@ -20,8 +20,44 @@
     },
     "editor.acceptSuggestionOnEnter": "off",
     "editor.wordWrap": "on",
-    "vim.disableAnnoyingNeovimMessage": true,
     "editor.cursorBlinking": "solid",
     "files.trimTrailingWhitespace": true,
-    "workbench.colorTheme": "Life on mars"
+    // "vim.disableAnnoyingNeovimMessage": true,
+    "vim.enableNeovim": true,
+    "elm.formatOnSave": true,
+    "workbench.sideBar.location": "right",
+    "vim.handleKeys": {
+        "<C-d>": true
+    },
+    "vim.otherModesKeyBindings": [
+        {
+            "before": [
+                "u"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "before": [
+                "r"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "redo"
+                }
+            ]
+        }
+    ],
+    "elm.formatCommand": "/usr/local/bin/elm-format",
+    "git.autofetch": true,
+    "elm.reactorPort": 8080,
+    "workbench.colorCustomizations": {
+        // "activityBar.background": "#00AA00",
+        "statusBar.background": "#111"
+    }
 }
