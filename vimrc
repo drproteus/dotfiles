@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 " Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
+Bundle 'ElmCast/elm-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlpvim/ctrlp.vim'
@@ -20,19 +21,19 @@ Bundle 'elzr/vim-json'
 Bundle 'tikhomirov/vim-glsl'
 Bundle 'nikvdp/ejs-syntax'
 Bundle 'nvie/vim-flake8'
-" Bundle 'lambdatoast/elm.vim'
 Bundle 'jdonaldson/vaxe'
 Bundle 'morhetz/gruvbox'
 Bundle 'KeitaNakamura/neodark.vim'
-Bundle 'davidklsn/vim-sialoquent'
 Bundle 'python-mode/python-mode'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'ElmCast/elm-vim'
 Bundle 'posva/vim-vue'
 Bundle 'dyng/ctrlsf.vim'
 Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Bundle 'junegunn/fzf.vim'
+Bundle 'tomasr/molokai'
+Bundle 'tomasiser/vim-code-dark'
+Bundle 'joshdick/onedark.vim'
 
 " Highlight excess line width
 " augroup vimrc_autocmds
@@ -50,7 +51,7 @@ set laststatus=2
 
 " my config
 set background=dark
-colors gruvbox
+colors codedark
 set shiftwidth=4
 set tabstop=4
 set expandtab
@@ -101,3 +102,5 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:pymode_rope = 0
 let g:pymode_rope_loopup_project = 0
 let g:pymode_rope_complete_on_dot = 0
+
+let g:airline_theme = 'onedark'
