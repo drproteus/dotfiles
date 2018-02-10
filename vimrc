@@ -103,4 +103,4 @@ let g:pymode_rope = 0
 let g:pymode_rope_loopup_project = 0
 let g:pymode_rope_complete_on_dot = 0
 
-let g:airline_theme = 'onedark'
+let g:airline_theme = 'codedark'

@@ -7,3 +7,5 @@
     ~/.tmux.conf: tmux.conf
     ~/.config/Code/User/settings.json: Code/settings.json
     ~/.config/Code/User/keybindings.json: Code/keybindings.json
+    ~/.config/i3/config: config/i3/config
+    ~/.config/nvim/init.vim: config/nvim/init.vim
