@@ -59,7 +59,6 @@
         // "activityBar.background": "#00AA00",
         "statusBar.background": "#111"
     },
-    "workbench.colorTheme": "Life on mars",
     "editor.disableTranslate3d": true,
     "[cpp]": {
         "editor.quickSuggestions": false
