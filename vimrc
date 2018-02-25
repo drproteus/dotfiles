@@ -1,44 +1,51 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
-" let Vundle manage Vundle
-" required !
-Bundle 'gmarik/vundle'
+call plug#begin('~/.vim/plugged')
 
-" The bundles you install will be listed here
-" Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
-Bundle 'ElmCast/elm-vim'
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'keith/swift.vim'
-Bundle 'chriskempson/vim-tomorrow-theme'
-Bundle 'elzr/vim-json'
-Bundle 'tikhomirov/vim-glsl'
-Bundle 'nikvdp/ejs-syntax'
-" Bundle 'nvie/vim-flake8'
-Bundle 'lambdatoast/elm.vim'
-Bundle 'jdonaldson/vaxe'
-Bundle 'morhetz/gruvbox'
-" Bundle 'KeitaNakamura/neodark.vim'
-" Bundle 'davidklsn/vim-sialoquent'
-Bundle 'python-mode/python-mode'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'posva/vim-vue'
-Bundle 'dyng/ctrlsf.vim'
-Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Bundle 'junegunn/fzf.vim'
-Bundle 'tpope/vim-dispatch'
-Bundle 'OmniSharp/omnisharp-vim'
-Bundle 'crusoexia/vim-monokai'
-Bundle 'tomasiser/vim-code-dark'
-Bundle 'tomasr/molokai'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'zchee/deoplete-jedi'
+
+" Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
+Plug 'ElmCast/elm-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/syntastic'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'keith/swift.vim'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'elzr/vim-json'
+Plug 'tikhomirov/vim-glsl'
+Plug 'nikvdp/ejs-syntax'
+" Plug 'nvie/vim-flake8'
+Plug 'lambdatoast/elm.vim'
+Plug 'jdonaldson/vaxe'
+Plug 'morhetz/gruvbox'
+" Plug 'KeitaNakamura/neodark.vim'
+" Plug 'davidklsn/vim-sialoquent'
+Plug 'python-mode/python-mode', {'branch': 'develop'}
+" Plug 'davidhalter/jedi-vim'
+" Plug 'Valloric/YouCompleteMe'
+Plug 'posva/vim-vue'
+Plug 'dyng/ctrlsf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-dispatch'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'crusoexia/vim-monokai'
+Plug 'tomasiser/vim-code-dark'
+Plug 'tomasr/molokai'
+
+call plug#end()
 
 " Highlight excess line width
 " augroup vimrc_autocmds
@@ -108,7 +115,7 @@ let g:pymode_rope = 0
 let g:pymode_rope_loopup_project = 0
 let g:pymode_rope_complete_on_dot = 0
 " let g:pymode_trim_whitespaces = 0
-"
+
 let g:ycm_semantic_triggers = { 'elm' : ['.'], }
 let g:elm_jump_to_error = 0
 let g:elm_make_output_file = "elm.js"
@@ -121,3 +128,18 @@ let g:elm_format_fail_silently = 0
 let g:elm_setup_keybindings = 1
 
 let g:airline_theme = 'codedark'
+
+
+"Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+let g:deoplete#enable_at_startup = 1
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
