@@ -33,14 +33,14 @@ Plug 'morhetz/gruvbox'
 " Plug 'KeitaNakamura/neodark.vim'
 " Plug 'davidklsn/vim-sialoquent'
 Plug 'python-mode/python-mode', {'branch': 'develop'}
-" Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'posva/vim-vue'
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-dispatch'
-Plug 'OmniSharp/omnisharp-vim'
+" Plug 'OmniSharp/omnisharp-vim'
 Plug 'crusoexia/vim-monokai'
 Plug 'tomasiser/vim-code-dark'
 Plug 'tomasr/molokai'
@@ -93,14 +93,14 @@ let g:ycm_autoclose_preview_window_after_completion=1
 " map <leader>g   :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
+" py << EOF
+" import os
+" import sys
+" if 'VIRTUAL_ENV' in os.environ:
+"     project_base_dir = os.environ['VIRTUAL_ENV']
+"     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"     execfile(activate_this, dict(__file__=activate_this))
+" EOF
 
 set enc=utf-8
 set fileencodings=ucs-bom,utf8,prc
@@ -143,3 +143,9 @@ let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:deoplete#enable_at_startup = 1
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+let g:fzf_action = {
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
+nnoremap <c-p> :FZF<cr>
