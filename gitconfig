@@ -16,7 +16,7 @@
 [push]
     default = simple
 [core]
-    editor = vim
+    editor = nvim
 	excludesfiles = ~/.gitignore
 	excludesfile = ~/.gitignore
 [alias]

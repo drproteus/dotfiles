@@ -108,7 +108,9 @@ set fileencoding=utf-8
 
 set nofoldenable
 filetype plugin indent on
-let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ackprg = 'ag'
+"--nogroup --nocolor --column'
+let g:ag_working_path_mode="r"
 
 " PYMODE
 let g:pymode_rope = 0
@@ -146,6 +148,8 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 let g:fzf_action = {
       \ 'ctrl-s': 'split',
-      \ 'ctrl-v': 'vsplit'
+      \ 'ctrl-v': 'vsplit',
+      \ 'ctrl-t': 'tabe'
       \ }
 nnoremap <c-p> :FZF<cr>
+nnoremap <c-f> :Ag<cr>
