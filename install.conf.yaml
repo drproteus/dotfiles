@@ -2,10 +2,12 @@
 
 - link:
     ~/.gitconfig: gitconfig
+    ~/.config/nvim: config/nvim
     ~/.vim: vim/
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
+<<<<<<< HEAD
     ~/.config/Code/User/settings.json: Code/settings.json
     ~/.config/Code/User/keybindings.json: Code/keybindings.json
-    ~/.config/i3/config: config/i3/config
-    ~/.config/nvim/init.vim: config/nvim/init.vim
+=======
+>>>>>>> macos

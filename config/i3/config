@@ -157,4 +157,3 @@ bar {
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id caja-dropbox start
-exec --no-startup-id nm-applet
