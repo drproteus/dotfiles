@@ -56,9 +56,9 @@ call plug#end()
 " augroup END
 
 " Powerline setup
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
-set gfn=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
-set laststatus=2
+" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
+" set gfn=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
+" set laststatus=2
 
 
 " my config
@@ -79,7 +79,7 @@ set autoread
 let NERDTreeQuitOnOpen = 1
 set completeopt=menu
 set linebreak
-autocmd Filetype html,ruby,javascript,json,haskell,ejs,htmldjango setlocal ts=2 sts=2 sw=2
+autocmd Filetype html,ruby,javascript,yml,yaml,json,haskell,ejs,htmldjango setlocal ts=2 sts=2 sw=2
 set noswapfile
 set wildignore+=*.pyc
 if &term =~ '256color'
@@ -117,6 +117,7 @@ let g:pymode_rope = 0
 let g:pymode_rope_loopup_project = 0
 let g:pymode_rope_complete_on_dot = 0
 " let g:pymode_trim_whitespaces = 0
+let g:pymode_lint_cwindow = 0
 
 let g:ycm_semantic_triggers = { 'elm' : ['.'], }
 let g:elm_jump_to_error = 0
@@ -135,12 +136,6 @@ let g:airline_theme = 'codedark'
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 let g:deoplete#enable_at_startup = 1
 " deoplete tab-complete
