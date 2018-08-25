@@ -19,8 +19,6 @@
     editor = vim
 	excludesfiles = ~/.gitignore
 	excludesfile = ~/.gitignore
-[branch]
-    autosetuprebase = always
 [merge]
     ff = no
     editor = nvim
