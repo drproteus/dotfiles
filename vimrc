@@ -14,6 +14,7 @@ endif
 Plug 'zchee/deoplete-jedi'
 
 " Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
+Plug 'ambv/black'
 Plug 'ElmCast/elm-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -44,6 +45,8 @@ Plug 'tpope/vim-dispatch'
 Plug 'crusoexia/vim-monokai'
 Plug 'tomasiser/vim-code-dark'
 Plug 'tomasr/molokai'
+Plug 'rakr/vim-one'
+Plug 'airblade/vim-rooter'
 
 call plug#end()
 
@@ -107,6 +110,24 @@ let g:ackprg = 'ag'
 "--nogroup --nocolor --column'
 let g:ag_working_path_mode="r"
 
+if has('mac')
+    let g:python2_host_prog = '/usr/local/bin/python'
+    let g:python3_host_prog = '/usr/local/bin/python3'
+    let username = 'jakegoritski'
+    let homedir = '/Users/' . username . '/'
+elseif has('unix')
+    let g:python2_host_prog = '/usr/bin/python'
+    let g:python3_host_prog = '/usr/bin/python3'
+    let username = 'jake'
+    let homedir = '/home/' . username . '/'
+elseif has('win32')
+    let g:python2_host_prog = ''
+    let g:python3_host_prog = ''
+    let username = 'Jake'
+    let homedir = 'C:\Users\' . username . '\'
+endif
+
+
 " PYMODE
 let g:pymode_rope = 0
 let g:pymode_rope_loopup_project = 0
@@ -143,4 +164,17 @@ let g:fzf_action = {
       \ 'ctrl-t': 'tabe'
       \ }
 nnoremap <c-p> :FZF<cr>
-nnoremap <c-f> :Ag<cr>
+nnoremap <c-f> :Rg<cr>
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return deoplete#mappings#smart_close_popup() . "\<CR>"
+endfunction
