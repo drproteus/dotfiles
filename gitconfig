@@ -1,8 +1,6 @@
 [user]
 	name = Jake Goritski
 	email = jgoritski@gmail.com
-[http]
-	sslVerify = false
 [color]
     status = auto
     diff = auto
@@ -16,7 +14,7 @@
 [push]
     default = simple
 [core]
-    editor = vim
+    editor = nvim
 	excludesfiles = ~/.gitignore
 	excludesfile = ~/.gitignore
 [merge]
@@ -26,3 +24,5 @@
 	excludesfile = ~/.gitignore
 [alias]
 	today = !git log --since=midnight --author=\"$(git config user.name)\" --oneline
+[branch]
+	autosetuprebase = never
