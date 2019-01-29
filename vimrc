@@ -47,6 +47,7 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'tomasr/molokai'
 Plug 'rakr/vim-one'
 Plug 'airblade/vim-rooter'
+Plug 'dracula/vim'
 
 call plug#end()
 
@@ -58,10 +59,9 @@ call plug#end()
 "     autocmd FileType python set nowrap
 " augroup END
 
-
+let g:dracula_colorterm = 0
 " my config
-set background=dark
-colors codedark
+colors dracula
 set shiftwidth=4
 set tabstop=4
 set expandtab
@@ -147,7 +147,7 @@ let g:elm_format_autosave = 1
 let g:elm_format_fail_silently = 0
 let g:elm_setup_keybindings = 1
 
-let g:airline_theme = 'codedark'
+let g:airline_theme = 'dracula'
 
 
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
