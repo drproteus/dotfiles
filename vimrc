@@ -61,7 +61,7 @@ call plug#end()
 
 let g:dracula_colorterm = 0
 " my config
-colors dracula
+colors codedark
 set shiftwidth=4
 set tabstop=4
 set expandtab
@@ -147,7 +147,7 @@ let g:elm_format_autosave = 1
 let g:elm_format_fail_silently = 0
 let g:elm_setup_keybindings = 1
 
-let g:airline_theme = 'dracula'
+let g:airline_theme = 'codedark'
 
 
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
