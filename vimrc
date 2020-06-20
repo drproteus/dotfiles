@@ -11,43 +11,35 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-Plug 'zchee/deoplete-jedi'
-
-" Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
-Plug 'ambv/black'
+" Plug 'OmniSharp/omnisharp-vim'
 Plug 'ElmCast/elm-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdtree'
-" Plug 'scrooloose/syntastic'
-" Plug 'ctrlpvim/ctrlp.vim'
-Plug 'keith/swift.vim'
+Plug 'airblade/vim-rooter'
 Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'elzr/vim-json'
-Plug 'tikhomirov/vim-glsl'
-Plug 'nikvdp/ejs-syntax'
-" Plug 'nvie/vim-flake8'
-Plug 'lambdatoast/elm.vim'
-Plug 'jdonaldson/vaxe'
-Plug 'morhetz/gruvbox'
-" Plug 'KeitaNakamura/neodark.vim'
-" Plug 'davidklsn/vim-sialoquent'
-Plug 'python-mode/python-mode', {'branch': 'develop'}
+Plug 'crusoexia/vim-monokai'
 Plug 'davidhalter/jedi-vim'
-" Plug 'Valloric/YouCompleteMe'
-Plug 'posva/vim-vue'
+Plug 'dracula/vim'
 Plug 'dyng/ctrlsf.vim'
+Plug 'elzr/vim-json'
+Plug 'jdonaldson/vaxe'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-dispatch'
-" Plug 'OmniSharp/omnisharp-vim'
-Plug 'crusoexia/vim-monokai'
+Plug 'keith/swift.vim'
+Plug 'lambdatoast/elm.vim'
+Plug 'morhetz/gruvbox'
+Plug 'nikvdp/ejs-syntax'
+Plug 'posva/vim-vue'
+Plug 'psf/black', { 'tag': '19.10b0' }
+Plug 'python-mode/python-mode', {'branch': 'develop'}
+Plug 'rakr/vim-one'
+Plug 'scrooloose/nerdtree'
+Plug 'tikhomirov/vim-glsl'
 Plug 'tomasiser/vim-code-dark'
 Plug 'tomasr/molokai'
-Plug 'rakr/vim-one'
-Plug 'airblade/vim-rooter'
-Plug 'dracula/vim'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
@@ -87,9 +79,6 @@ if &term =~ '256color'
   set t_ut=
 endif
 
-let g:ycm_autoclose_preview_window_after_completion=1
-" map <leader>g   :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
 "python with virtualenv support
 " py << EOF
 " import os
@@ -110,23 +99,10 @@ let g:ackprg = 'ag'
 "--nogroup --nocolor --column'
 let g:ag_working_path_mode="r"
 
-if has('mac')
-    let g:python2_host_prog = '/usr/local/bin/python'
-    let g:python3_host_prog = '/usr/local/bin/python3'
-    let username = 'jakegoritski'
-    let homedir = '/Users/' . username . '/'
-elseif has('unix')
-    let g:python2_host_prog = '/usr/bin/python'
-    let g:python3_host_prog = '/usr/bin/python3'
-    let username = 'jake'
-    let homedir = '/home/' . username . '/'
-elseif has('win32')
-    let g:python2_host_prog = ''
-    let g:python3_host_prog = ''
-    let username = 'Jake'
-    let homedir = 'C:\Users\' . username . '\'
-endif
-
+let g:python2_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
+let username = 'jake'
+let homedir = '/home/' . username . '/'
 
 " PYMODE
 let g:pymode_rope = 0
@@ -136,7 +112,6 @@ let g:pymode_rope_complete_on_dot = 0
 " let g:pymode_trim_whitespaces = 0
 let g:pymode_lint_cwindow = 0
 
-let g:ycm_semantic_triggers = { 'elm' : ['.'], }
 let g:elm_jump_to_error = 0
 let g:elm_make_output_file = "elm.js"
 let g:elm_make_show_warnings = 0
