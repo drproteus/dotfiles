@@ -110,23 +110,6 @@ let g:ackprg = 'ag'
 "--nogroup --nocolor --column'
 let g:ag_working_path_mode="r"
 
-if has('mac')
-    let g:python2_host_prog = '/usr/local/bin/python'
-    let g:python3_host_prog = '/usr/local/bin/python3'
-    let username = 'jakegoritski'
-    let homedir = '/Users/' . username . '/'
-elseif has('unix')
-    let g:python2_host_prog = '/usr/bin/python'
-    let g:python3_host_prog = '/usr/bin/python3'
-    let username = 'jake'
-    let homedir = '/home/' . username . '/'
-elseif has('win32')
-    let g:python2_host_prog = ''
-    let g:python3_host_prog = ''
-    let username = 'Jake'
-    let homedir = 'C:\Users\' . username . '\'
-endif
-
 
 " PYMODE
 let g:pymode_rope = 0
