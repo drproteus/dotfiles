@@ -99,11 +99,6 @@ let g:ackprg = 'ag'
 "--nogroup --nocolor --column'
 let g:ag_working_path_mode="r"
 
-let g:python2_host_prog = '/usr/bin/python'
-let g:python3_host_prog = '/usr/bin/python3'
-let username = 'jake'
-let homedir = '/home/' . username . '/'
-
 " PYMODE
 let g:pymode_rope = 0
 let g:pymode_rope_loopup_project = 0
