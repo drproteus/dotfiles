@@ -1,82 +1,40 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# Customize to your needs...
+eval $(starship init zsh)
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+DockerResourcesBin="/mnt/c/Program Files/Docker/Docker/resources/bin"
+WindowsShells="/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/system32"
+export PATH=$PATH:$DockerResourcesBin:$WindowsShells
+export PATH=$PATH:/mnt/c/Users/jgori/AppData/Local/Programs/Microsoft\ VS\ Code/bin
 
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# make make quiet?
+alias make="make -s"
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+# cargo
+export PATH=$PATH:$HOME/.cargo/bin:$HOME/.local/bin
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+export EDITOR=/usr/bin/nvim
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+# vagrant
+export VAGRANT_WSL_ACCESS_WINDOWS_USER=jgori
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=1
+export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/Users/jgori"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+# clipboard
+alias pbcopy='clip.exe'
+alias pbpaste="powershell.exe -command 'Get-Clipboard' | tr -d '\r' | head -n -1"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+# windows aliases
+alias scoop='powershell.exe "C:\Users\jgori\scoop\shims\scoop.ps1"'
+alias hvc='hvc.exe'
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git python pip osx brew zsh-syntax-highlighting)
-
-# User configuration
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:/Users/j/.gem/ruby/2.0.0/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="ls -laG"
+if [[ -s "$HOME/.secrets" ]]; then
+  source "$HOME/.secrets"
+fi
 
