@@ -40,6 +40,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'zchee/deoplete-jedi'
+Plug 'pantharshit00/vim-prisma'
 
 call plug#end()
 
